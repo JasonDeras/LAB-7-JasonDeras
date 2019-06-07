@@ -1,19 +1,20 @@
 
-import java.awt.*;
-import java.util.*;
+import java.awt.Color;
 
 public class Menu {
 
     private int tiempo;
     private String id;
+    private String fecha;
     private Color c;
-    private Date fecha;
+    private String tipo;
 
-    public Menu(int tiempo, String id, Color c, Date fecha) {
+    public Menu(int tiempo, String id, String fecha, Color c, String tipo) {
         this.tiempo = tiempo;
         this.id = id;
-        this.c = c;
         this.fecha = fecha;
+        this.c = c;
+        this.tipo = tipo;
     }
 
     public int getTiempo() {
@@ -32,6 +33,14 @@ public class Menu {
         this.id = id;
     }
 
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
     public Color getC() {
         return c;
     }
@@ -40,17 +49,17 @@ public class Menu {
         this.c = c;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     @Override
     public String toString() {
-        return "Menu{" + "id=" + id + '}';
+        return "Menu{" + "tipo=" + tipo + '}';
     }
 
 }
