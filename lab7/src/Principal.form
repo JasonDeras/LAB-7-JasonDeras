@@ -453,7 +453,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Creacion de Clientes con sus platillos"/>
+            <Property name="text" type="java.lang.String" value="Creacion de Chefs"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
@@ -639,9 +639,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JProgressBar" name="pg_Ordenes">
-      <Properties>
-        <Property name="maximum" type="int" value="100000000"/>
-      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

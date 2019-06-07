@@ -292,7 +292,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setText("Creacion de Clientes con sus platillos");
+        jLabel7.setText("Creacion de Chefs");
 
         jLabel8.setText("Nombre");
 
@@ -400,8 +400,6 @@ public class Principal extends javax.swing.JFrame {
                 bt_AvanzarActionPerformed(evt);
             }
         });
-
-        pg_Ordenes.setMaximum(100000000);
 
         jl_Chefs.setModel(new DefaultListModel());
         jScrollPane1.setViewportView(jl_Chefs);
@@ -659,7 +657,7 @@ public class Principal extends javax.swing.JFrame {
             fecha = new Date();
             d = new GregorianCalendar();
             fecha = d.getTime();
-            Menu m = new Menu(12, "Sopas", fecha,Color.black, "Res");
+            Menu m = new Menu(12, "Sopas", fecha, Color.black, "Res");
             p.getPlatilos().add(m);
             cl.add(p);
             modelo.addElement(p);

@@ -10,6 +10,9 @@ public class Menu {
     private Color c;
     private String tipo;
 
+    public Menu() {
+    }
+
     public Menu(int tiempo, String id, Date fecha, Color c, String tipo) {
         this.tiempo = tiempo;
         this.id = id;
