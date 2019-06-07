@@ -1,15 +1,16 @@
 
 import java.awt.Color;
+import java.util.Date;
 
 public class Menu {
 
     private int tiempo;
     private String id;
-    private String fecha;
+    private Date fecha;
     private Color c;
     private String tipo;
 
-    public Menu(int tiempo, String id, String fecha, Color c, String tipo) {
+    public Menu(int tiempo, String id, Date fecha, Color c, String tipo) {
         this.tiempo = tiempo;
         this.id = id;
         this.fecha = fecha;
@@ -33,11 +34,11 @@ public class Menu {
         this.id = id;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
@@ -59,7 +60,8 @@ public class Menu {
 
     @Override
     public String toString() {
-        return "Menu{" + "tipo=" + tipo + '}';
+        return "Menu{" + "tiempo=" + tiempo + ", id=" + id + ", fecha=" + fecha + ", c=" + c + ", tipo=" + tipo + '}';
     }
 
+    
 }
