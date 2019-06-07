@@ -54,6 +54,17 @@ public class Principal extends javax.swing.JFrame {
         bg_Postres = new javax.swing.ButtonGroup();
         bg_Entradas = new javax.swing.ButtonGroup();
         bg_Genero_Chefs = new javax.swing.ButtonGroup();
+        jd_Crear_Chefs = new javax.swing.JDialog();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        tf_Nombre_Chefs = new javax.swing.JTextField();
+        Genero6 = new javax.swing.JLabel();
+        rb_M1 = new javax.swing.JRadioButton();
+        rb_F1 = new javax.swing.JRadioButton();
+        Genero7 = new javax.swing.JLabel();
+        tf_Edad_Chefs = new javax.swing.JTextField();
+        bt_Crear_Chef = new javax.swing.JButton();
+        bt_Volver_Chefs = new javax.swing.JButton();
         bt_Crear_Cliente = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         bt_Avanzar = new javax.swing.JButton();
@@ -76,7 +87,6 @@ public class Principal extends javax.swing.JFrame {
         Genero1.setText("Edad");
 
         bg_Genero_Clientes.add(rb_M);
-        rb_M.setSelected(true);
         rb_M.setText("Masculino");
 
         bg_Genero_Clientes.add(rb_F);
@@ -280,6 +290,93 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setText("Creacion de Clientes con sus platillos");
+
+        jLabel8.setText("Nombre");
+
+        Genero6.setText("Genero");
+
+        bg_Genero_Chefs.add(rb_M1);
+        rb_M1.setSelected(true);
+        rb_M1.setText("Masculino");
+
+        bg_Genero_Chefs.add(rb_F1);
+        rb_F1.setText("Femenino");
+
+        Genero7.setText("Edad");
+
+        bt_Crear_Chef.setText("Crear");
+        bt_Crear_Chef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Crear_ChefActionPerformed(evt);
+            }
+        });
+
+        bt_Volver_Chefs.setText("Volver");
+        bt_Volver_Chefs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Volver_ChefsActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_Crear_ChefsLayout = new javax.swing.GroupLayout(jd_Crear_Chefs.getContentPane());
+        jd_Crear_Chefs.getContentPane().setLayout(jd_Crear_ChefsLayout);
+        jd_Crear_ChefsLayout.setHorizontalGroup(
+            jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 463, Short.MAX_VALUE)
+            .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_Crear_ChefsLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jd_Crear_ChefsLayout.createSequentialGroup()
+                            .addComponent(jLabel8)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tf_Nombre_Chefs, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jd_Crear_ChefsLayout.createSequentialGroup()
+                            .addComponent(Genero7)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_Edad_Chefs, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jd_Crear_ChefsLayout.createSequentialGroup()
+                            .addComponent(Genero6)
+                            .addGap(18, 18, 18)
+                            .addComponent(rb_M1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(rb_F1))
+                        .addComponent(jLabel7)
+                        .addGroup(jd_Crear_ChefsLayout.createSequentialGroup()
+                            .addComponent(bt_Crear_Chef)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(bt_Volver_Chefs)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jd_Crear_ChefsLayout.setVerticalGroup(
+            jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 447, Short.MAX_VALUE)
+            .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_Crear_ChefsLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel7)
+                    .addGap(38, 38, 38)
+                    .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(tf_Nombre_Chefs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Genero6)
+                        .addComponent(rb_M1)
+                        .addComponent(rb_F1))
+                    .addGap(23, 23, 23)
+                    .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Genero7)
+                        .addComponent(tf_Edad_Chefs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(219, 219, 219)
+                    .addGroup(jd_Crear_ChefsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(bt_Crear_Chef)
+                        .addComponent(bt_Volver_Chefs))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bt_Crear_Cliente.setText("Crear Cliente");
@@ -290,6 +387,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton2.setText("Crear Chef");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         bt_Avanzar.setText("Ordenar");
 
@@ -589,7 +691,7 @@ public class Principal extends javax.swing.JFrame {
             bt_Crear_Cliente.setEnabled(false);
             JOptionPane.showMessageDialog(jd_Creacion_Clientes, "Debe de escoger un platillo de cada tipo ");
         }//Fin del if que ayuda con los platillos
-
+        bt_Crear_Cliente.setEnabled(true);
         ADMP ap = new ADMP("./personas.shay");
         ap.cargarArchivo();
         ap.setListap(p);
@@ -634,6 +736,52 @@ public class Principal extends javax.swing.JFrame {
         jd_Creacion_Clientes.setVisible(true);
     }//GEN-LAST:event_bt_Crear_ClienteActionPerformed
 
+    private void bt_Crear_ChefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Crear_ChefActionPerformed
+        //Lista de Clientes
+        DefaultListModel modelo = (DefaultListModel) jl_Chefs.getModel();
+
+        //Cliente
+        String nombre = tf_Nombre_Chefs.getText();
+        int edad = Integer.parseInt(tf_Edad_Chefs.getText());
+        String genero = "";
+
+        if (rb_M1.isSelected()) {
+            genero = "Masculino";
+        } else if (rb_F1.isSelected()) {
+            genero = "Femenino";
+        } else {
+            JOptionPane.showMessageDialog(jd_Crear_Chefs, "Debe de Seleccionar un genero ");
+            bt_Crear_Chef.setEnabled(false);
+        }//If del genero de los chefs
+        bt_Crear_Chef.setEnabled(true);
+        c = new Chefs(nombre, edad, genero);
+        ch.add(c);
+        modelo.addElement(c);
+        jl_Chefs.setModel(modelo);
+        ADMP ap = new ADMP("./personas.shay");
+        ap.cargarArchivo();
+        ap.setListap(c);
+        ap.escribirArchivo();
+        JOptionPane.showMessageDialog(jd_Crear_Chefs, "Chef Creado exitosamente");
+        tf_Edad_Chefs.setText("");
+        tf_Nombre_Chefs.setText("");
+        rb_M1.setSelected(true);
+        rb_F1.setSelected(false);
+    }//GEN-LAST:event_bt_Crear_ChefActionPerformed
+
+    private void bt_Volver_ChefsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Volver_ChefsActionPerformed
+        // TODO add your handling code here:
+        jd_Crear_Chefs.dispose();
+    }//GEN-LAST:event_bt_Volver_ChefsActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jd_Crear_Chefs.setModal(true);
+        jd_Crear_Chefs.pack();
+        jd_Crear_Chefs.setLocationRelativeTo(this);
+        jd_Crear_Chefs.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -676,6 +824,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel Genero3;
     private javax.swing.JLabel Genero4;
     private javax.swing.JLabel Genero5;
+    private javax.swing.JLabel Genero6;
+    private javax.swing.JLabel Genero7;
     private javax.swing.ButtonGroup bg_Entradas;
     private javax.swing.ButtonGroup bg_Genero_Chefs;
     private javax.swing.ButtonGroup bg_Genero_Clientes;
@@ -683,8 +833,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_Postres;
     private javax.swing.ButtonGroup bg_Sopas;
     private javax.swing.JButton bt_Avanzar;
+    private javax.swing.JButton bt_Crear_Chef;
     private javax.swing.JButton bt_Crear_Cliente;
     private javax.swing.JButton bt_Crear_Clientes;
+    private javax.swing.JButton bt_Volver_Chefs;
     private javax.swing.JButton bt_Volver_Cliente;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -693,10 +845,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JDialog jd_Creacion_Clientes;
+    private javax.swing.JDialog jd_Crear_Chefs;
     private javax.swing.JList<String> jl_Chefs;
     private javax.swing.JList<String> jl_Clientes;
     private javax.swing.JTable jt_Platillos_Clientes;
@@ -709,9 +864,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_Empanada;
     private javax.swing.JRadioButton rb_Espaguetis;
     private javax.swing.JRadioButton rb_F;
+    private javax.swing.JRadioButton rb_F1;
     private javax.swing.JRadioButton rb_Hamburgesa;
     private javax.swing.JRadioButton rb_Huevos;
     private javax.swing.JRadioButton rb_M;
+    private javax.swing.JRadioButton rb_M1;
     private javax.swing.JRadioButton rb_Pie_Limon;
     private javax.swing.JRadioButton rb_Pollo;
     private javax.swing.JRadioButton rb_Polo_Pure;
@@ -719,8 +876,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_Salmon;
     private javax.swing.JRadioButton rb_Tiramiso;
     private javax.swing.JRadioButton rb_Tortilla;
+    private javax.swing.JTextField tf_Edad_Chefs;
     private javax.swing.JTextField tf_Edad_Cliente;
+    private javax.swing.JTextField tf_Nombre_Chefs;
     private javax.swing.JTextField tf_Nombre_Cliente;
     // End of variables declaration//GEN-END:variables
 private ArrayList<Cliente> cl = new ArrayList();
+    private ArrayList<Chefs> ch = new ArrayList();
+    private Chefs c;
 }
