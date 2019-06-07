@@ -561,7 +561,7 @@
               </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="pb_Ordenes" max="32767" attributes="0"/>
+                  <Component id="pg_Ordenes" max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
@@ -601,7 +601,7 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="pb_Ordenes" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="pg_Ordenes" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -634,8 +634,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ordenar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_AvanzarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JProgressBar" name="pb_Ordenes">
+    <Component class="javax.swing.JProgressBar" name="pg_Ordenes">
+      <Properties>
+        <Property name="maximum" type="int" value="100000000"/>
+      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

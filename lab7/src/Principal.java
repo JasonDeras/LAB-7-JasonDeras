@@ -11,6 +11,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        ab = new adminbarra(pg_Ordenes);
     }
 
     @SuppressWarnings("unchecked")
@@ -68,7 +69,7 @@ public class Principal extends javax.swing.JFrame {
         bt_Crear_Cliente = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         bt_Avanzar = new javax.swing.JButton();
-        pb_Ordenes = new javax.swing.JProgressBar();
+        pg_Ordenes = new javax.swing.JProgressBar();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_Chefs = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -394,6 +395,13 @@ public class Principal extends javax.swing.JFrame {
         });
 
         bt_Avanzar.setText("Ordenar");
+        bt_Avanzar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_AvanzarActionPerformed(evt);
+            }
+        });
+
+        pg_Ordenes.setMaximum(100000000);
 
         jl_Chefs.setModel(new DefaultListModel());
         jScrollPane1.setViewportView(jl_Chefs);
@@ -459,7 +467,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pb_Ordenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pg_Ordenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel4)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -491,7 +499,7 @@ public class Principal extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(pb_Ordenes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pg_Ordenes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
@@ -532,7 +540,7 @@ public class Principal extends javax.swing.JFrame {
             fecha = new Date();
             d = new GregorianCalendar();
             fecha = d.getTime();
-            Menu m = new Menu(5, "Entradas", fecha, Color.getColor("brown"), "Anafre Prisiense");
+            Menu m = new Menu(5, "Entradas", fecha, Color.black, "Anafre Prisiense");
             p.getPlatilos().add(m);
             cl.add(p);
             modelo.addElement(p);
@@ -641,7 +649,7 @@ public class Principal extends javax.swing.JFrame {
             fecha = new Date();
             d = new GregorianCalendar();
             fecha = d.getTime();
-            Menu m = new Menu(15, "Plato Fuerte", fecha, Color.getColor("brown"), "Anafre Prisiense");
+            Menu m = new Menu(15, "Plato Fuerte", fecha, Color.black, "Anafre Prisiense");
             p.getPlatilos().add(m);
             cl.add(p);
             modelo.addElement(p);
@@ -651,7 +659,7 @@ public class Principal extends javax.swing.JFrame {
             fecha = new Date();
             d = new GregorianCalendar();
             fecha = d.getTime();
-            Menu m = new Menu(12, "Sopas", fecha, Color.getColor("brown"), "Res");
+            Menu m = new Menu(12, "Sopas", fecha,Color.black, "Res");
             p.getPlatilos().add(m);
             cl.add(p);
             modelo.addElement(p);
@@ -671,7 +679,7 @@ public class Principal extends javax.swing.JFrame {
             fecha = new Date();
             d = new GregorianCalendar();
             fecha = d.getTime();
-            Menu m = new Menu(9, "Postres", fecha, Color.getColor("brown"), "Tiramisu");
+            Menu m = new Menu(9, "Postres", fecha, Color.black, "Tiramisu");
             p.getPlatilos().add(m);
             cl.add(p);
             modelo.addElement(p);
@@ -782,6 +790,11 @@ public class Principal extends javax.swing.JFrame {
         jd_Crear_Chefs.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void bt_AvanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_AvanzarActionPerformed
+        // TODO add your handling code here:
+        ab.start();
+    }//GEN-LAST:event_bt_AvanzarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -855,7 +868,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_Chefs;
     private javax.swing.JList<String> jl_Clientes;
     private javax.swing.JTable jt_Platillos_Clientes;
-    private javax.swing.JProgressBar pb_Ordenes;
+    private javax.swing.JProgressBar pg_Ordenes;
     private javax.swing.JRadioButton rb_Anafre;
     private javax.swing.JRadioButton rb_Capirotada;
     private javax.swing.JRadioButton rb_Cheesecake;
@@ -884,4 +897,5 @@ public class Principal extends javax.swing.JFrame {
 private ArrayList<Cliente> cl = new ArrayList();
     private ArrayList<Chefs> ch = new ArrayList();
     private Chefs c;
+    adminbarra ab;
 }
